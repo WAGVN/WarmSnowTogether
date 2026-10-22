@@ -22,12 +22,12 @@
     <img alt="Protocol" src="https://img.shields.io/badge/Protocol-v3-8b0000?style=for-the-badge&labelColor=0b0d12" />
     <img alt="License" src="https://img.shields.io/badge/License-MIT-c9a227?style=for-the-badge&labelColor=0b0d12" />
     <br>
-  <a href="#缘起">缘起</a> &nbsp;&middot;&nbsp;
-  <a href="#功能一览">功能一览</a> &nbsp;&middot;&nbsp;
-  <a href="#已知限制">已知限制</a> &nbsp;&middot;&nbsp;
-  <a href="#版本">版本</a> &nbsp;&middot;&nbsp;
-  <a href="#开发者">开发者</a> &nbsp;&middot;&nbsp;
-  <a href="#致谢--免责声明">致谢&免责</a>
+  <a href="#-缘起">缘起</a> &nbsp;&middot;&nbsp;
+  <a href="#-功能一览">功能一览</a> &nbsp;&middot;&nbsp;
+  <a href="#-已知限制">已知限制</a> &nbsp;&middot;&nbsp;
+  <a href="#-版本">版本</a> &nbsp;&middot;&nbsp;
+  <a href="#-开发者">开发者</a> &nbsp;&middot;&nbsp;
+  <a href="#-致谢--免责声明">致谢&免责</a>
 </p>
 
 
@@ -314,7 +314,7 @@ WarmSnow\BepInEx\LogOutput.log
 ---
 
 <p align="center">
-  感谢访问 <b><em>VisRLFlexGrasp</em></b> ✨
+  感谢访问 <b><em>WarmSnowTogether</em></b> ✨
 </p>
 
 <p align="center">
