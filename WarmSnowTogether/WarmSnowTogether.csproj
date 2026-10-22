@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7428BF73-2724-4B9F-8105-31B0E3CFFC42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WarmSnowTogether</RootNamespace>
+    <AssemblyName>WarmSnowTogether</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony20">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\BepInEx\core\0Harmony20.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>E:\SteamLibrary\steamapps\common\WarmSnow\WarmSnow_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\WarmSnowTogetherMod.cs" />
+    <Compile Include="Networking\ClientController.cs" />
+    <Compile Include="Networking\entities\NetworkEntityManager.cs" />
+    <Compile Include="Networking\Enums\PacketType.cs" />
+    <Compile Include="Networking\HostController.cs" />
+    <Compile Include="Networking\Interfaces\INetworkPacket.cs" />
+    <Compile Include="Networking\Interfaces\NetworkRoles.cs" />
+    <Compile Include="Networking\NetworkManager.cs" />
+    <Compile Include="Networking\Packets\ConnectionAcceptedPacket.cs" />
+    <Compile Include="Networking\Packets\ConnectionRejectedPacket.cs" />
+    <Compile Include="Networking\Packets\ConnectionRequestPacket.cs" />
+    <Compile Include="Networking\Packets\DIsconnectPacket.cs" />
+    <Compile Include="Networking\Packets\EnemyDeathPacket.cs" />
+    <Compile Include="Networking\Packets\EnemySpawnPacket.cs" />
+    <Compile Include="Networking\Packets\EnemyStatePacket.cs" />
+    <Compile Include="Networking\Packets\LoadingStatePacket.cs" />
+    <Compile Include="Networking\Packets\PlayerJoinPacket.cs" />
+    <Compile Include="Networking\Packets\PlayerLeavePacket.cs" />
+    <Compile Include="Networking\Packets\PlayerPositionPacket.cs" />
+    <Compile Include="Networking\Packets\PlayerStatePacket.cs" />
+    <Compile Include="Networking\Packets\RoomChangePacket.cs" />
+    <Compile Include="Networking\Packets\WorldStatePacket.cs" />
+    <Compile Include="Networking\Serialization\PacketFactory.cs" />
+    <Compile Include="Networking\Serialization\PacketSerializer.cs" />
+    <Compile Include="Networking\Players\LoadingSyncManager.cs" />
+    <Compile Include="Networking\Players\PlayerManager.cs" />
+    <Compile Include="Networking\Players\PlayerSyncManager.cs" />
+    <Compile Include="Networking\Players\RemotePlayerAvatar.cs" />
+    <Compile Include="Networking\Rooms\WorldSyncManager.cs" />
+    <Compile Include="Networking\Packets\SceneSyncPacket.cs" />
+    <Compile Include="Networking\Packets\DamageRequestPacket.cs" />
+    <Compile Include="Networking\Packets\SnapshotRequestPacket.cs" />
+    <!-- [WST Loot Sync v1] -->
+    <Compile Include="Networking\Loot\LootTypes.cs" />
+    <Compile Include="Networking\Loot\LootHookAdapter.cs" />
+    <Compile Include="Networking\Loot\LootSyncManager.cs" />
+    <Compile Include="Networking\Packets\LootSpawnPacket.cs" />
+    <Compile Include="Networking\Packets\LootConsumedPacket.cs" />
+    <Compile Include="Networking\entities\EnemySyncManager.cs" />
+    <Compile Include="Networking\Steam\SteamCallbackRouter.cs" />
+    <Compile Include="Networking\Steam\SteamLobbyManager.cs" />
+    <Compile Include="Networking\Steam\SteamP2PManager.cs" />
+    <Compile Include="Networking\Steam\SteamReflectionHelper.cs" />
+    <Compile Include="Networking\Steam\SteamTypeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Systems\Logging\Debug.cs" />
+    <Compile Include="Systems\Logging\Logger.cs" />
+    <Compile Include="UI\UIManager.cs" />
+    <Compile Include="UI\StatusOverlay.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
